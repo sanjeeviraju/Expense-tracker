@@ -9,10 +9,6 @@
 
 A sophisticated expense tracking solution with data visualization and analysis capabilities.
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Contributing](#contributing) • [License](#license)
-
-![Expense Tracker Dashboard](docs/images/dashboard.png)
-
 </div>
 
 ## 🌟 Features
