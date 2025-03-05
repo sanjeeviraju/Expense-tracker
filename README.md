@@ -37,6 +37,11 @@ A sophisticated expense tracking solution with data visualization and analysis c
 - Modular architecture
 - Theme-aware visualization engine
 
+## Preview
+![Light](https://github.com/user-attachments/assets/211a2269-bdcc-45f1-99b7-35af95ab7b71)
+
+![Dark](https://github.com/user-attachments/assets/49d93ba2-6677-42db-8887-ba962659ac6f)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
