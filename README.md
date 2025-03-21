@@ -13,7 +13,7 @@ A sophisticated expense tracking solution with data visualization and analysis c
 
 ## 🌟 Features
 
-### 🎨 Modern Interface
+### 🎨 Minimal Interface
 - Adaptive themes (Light/Dark/AMOLED)
 - Responsive design
 - Real-time data visualization
