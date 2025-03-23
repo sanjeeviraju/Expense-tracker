@@ -5,21 +5,35 @@ on:
       - main  # Replace with your target branch
   schedule:
     - cron: '0 * * * *' # Example: Run every hour
+
 jobs:
   commit:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Check out the repository code
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Make changes (example)
+      # Step 2: Make changes (example - modify a file)
+      - name: Make changes
         run: |
-          echo "Some automated content" >> file.txt
+          echo "This is an automated update - $(date)" >> file.txt
 
-      - name: Commit changes
+      # Step 3: Configure Git
+      - name: Configure Git
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
+
+      # Step 4: Add and commit changes
+      - name: Commit changes
+        run: |
           git add .
           git commit -m "Automated commit from GitHub Actions"
-          git push
+
+      # Step 5: Push changes using a Personal Access Token (PAT)
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          git push https://sanjeeviraju:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/sanjeeviraju/Expense-tracker
