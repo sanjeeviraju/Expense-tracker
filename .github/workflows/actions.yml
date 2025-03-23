@@ -1,0 +1,25 @@
+name: Auto Commit
+on:
+  push:
+    branches:
+      - main  # Replace with your target branch
+  schedule:
+    - cron: '0 * * * *' # Example: Run every hour
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Make changes (example)
+        run: |
+          echo "Some automated content" >> file.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Automated commit from GitHub Actions"
+          git push
